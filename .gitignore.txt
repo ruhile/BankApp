@@ -1,0 +1,13 @@
+# Ignore dependencies
+backend/node_modules/
+frontend/node_modules/
+
+# Ignore build files
+frontend/dist/
+backend/dist/
+
+# Ignore environment files
+backend/.env
+
+# System
+.DS_Store
