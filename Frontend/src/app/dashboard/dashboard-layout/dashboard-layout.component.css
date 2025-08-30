@@ -1,0 +1,23 @@
+.dashboard-toolbar {
+  background-color: #0d47a1; /* Bank blue */
+  color: white;
+  font-weight: 500;
+}
+
+.app-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.active-link {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.dashboard-content {
+  padding: 20px;
+}

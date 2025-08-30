@@ -1,0 +1,14 @@
+<!-- Animated background (shown only on Home + Auth pages) -->
+<div class="auth-bg" *ngIf="showAuthBackground">
+  <div class="gradient"></div>
+  <div class="floaters">
+    <span class="f f1"></span>
+    <span class="f f2"></span>
+    <span class="f f3"></span>
+    <span class="f f4"></span>
+    <span class="f f5"></span>
+  </div>
+</div>
+
+<!-- Routed pages appear here -->
+<router-outlet></router-outlet>

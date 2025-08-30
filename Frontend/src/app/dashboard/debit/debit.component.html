@@ -1,0 +1,20 @@
+<div class="container">
+  <form [formGroup]="debitForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="debitAmount">Debit Amount</label>
+      <input id="debitAmount" type="number" formControlName="debitAmount" />
+      <div *ngIf="debitForm.get('debitAmount')?.invalid && debitForm.get('debitAmount')?.touched">
+        Debit Amount must be greater than 0.
+      </div>
+    </div>
+
+    <div>
+      <label for="note">Note</label>
+      <input id="note" type="text" formControlName="note" placeholder="Optional note" />
+    </div>
+
+    <button type="submit" [disabled]="debitForm.invalid">Submit</button>
+  </form>
+
+  <p *ngIf="message">{{ message }}</p>
+</div>

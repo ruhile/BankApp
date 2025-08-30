@@ -1,0 +1,35 @@
+<div class="auth-wrapper">
+  <mat-card class="auth-card">
+    <h2>📝 Register</h2>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Account Number</mat-label>
+        <input matInput formControlName="accountNumber" type="text">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" type="password">
+      </mat-form-field>
+
+      <button mat-raised-button color="accent" class="full-width" type="submit">
+        Register
+      </button>
+    </form>
+
+    <p class="switch">
+      Already have an account? <a routerLink="/auth/login">Login</a>
+    </p>
+  </mat-card>
+</div>

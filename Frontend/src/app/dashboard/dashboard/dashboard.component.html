@@ -1,0 +1,35 @@
+<div class="dashboard-home">
+
+  <!-- Welcome & Balance -->
+  <mat-card class="welcome-card">
+    <mat-card-title>
+      Welcome, <span class="username">{{ userName }}</span>
+    </mat-card-title>
+    <mat-card-content>
+      <p>Your current balance:</p>
+      <h2>₹ {{ balance | number }}</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Quick Actions -->
+  <div class="quick-actions">
+    <mat-card class="action-card" routerLink="/dashboard/credit">
+      <mat-icon>arrow_downward</mat-icon>
+      <h3>Credit Amount</h3>
+      <p>Add money to your account</p>
+    </mat-card>
+
+    <mat-card class="action-card" routerLink="/dashboard/debit">
+      <mat-icon>arrow_upward</mat-icon>
+      <h3>Debit Amount</h3>
+      <p>Withdraw money from your account</p>
+    </mat-card>
+
+    <mat-card class="action-card" routerLink="/dashboard/transactions">
+      <mat-icon>receipt_long</mat-icon>
+      <h3>View Transactions</h3>
+      <p>Check your recent activity</p>
+    </mat-card>
+  </div>
+
+</div>

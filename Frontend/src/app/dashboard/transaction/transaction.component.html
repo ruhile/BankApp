@@ -1,0 +1,26 @@
+<div class="dashboard">
+    <h2>Transaction History</h2>
+    <table *ngIf="transactions.length > 0; else noTransactions">
+      <thead>
+        <tr>
+          <th>Account Number</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transaction of transactions">
+          <td>{{ transaction.accountNumber }}</td>
+          <td>{{ transaction.type }}</td>
+          <td>{{ transaction.amount }}</td>
+          <td>{{ transaction.date | date:'short' }}</td>
+          <td>{{ transaction.balance }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #noTransactions>
+      <p>No transactions found.</p>
+    </ng-template>
+  </div>
+   

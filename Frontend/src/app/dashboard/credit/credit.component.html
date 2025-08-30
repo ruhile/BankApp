@@ -1,0 +1,26 @@
+<div class="credit-form-container">
+  <form [formGroup]="creditForm" (ngSubmit)="onSubmit()">
+
+    <!-- Credit Amount -->
+    <div>
+      <label for="creditAmount">Credit Amount:</label>
+      <input id="creditAmount" formControlName="creditAmount" type="number" />
+      <div *ngIf="creditForm.get('creditAmount')?.invalid && creditForm.get('creditAmount')?.touched">
+        <small *ngIf="creditForm.get('creditAmount')?.errors?.['required']">Credit amount is required.</small>
+        <small *ngIf="creditForm.get('creditAmount')?.errors?.['min']">Amount must be greater than 0.</small>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div>
+      <label for="note">Note</label>
+      <input id="note" type="text" formControlName="note" placeholder="Optional note" />
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" [disabled]="creditForm.invalid">Credit Amount</button>
+  </form>
+
+  <!-- Transaction message -->
+  <p *ngIf="message">{{ message }}</p>
+</div>

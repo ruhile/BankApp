@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="dashboard-toolbar">
+  <span class="app-title">💰 MyBank</span>
+  <span class="spacer"></span>
+
+  <button mat-button routerLink="/dashboard" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
+    <mat-icon>home</mat-icon>
+    Dashboard
+  </button>
+
+  <button mat-button routerLink="/dashboard/credit" routerLinkActive="active-link">
+    <mat-icon>arrow_downward</mat-icon>
+    Credit
+  </button>
+
+  <button mat-button routerLink="/dashboard/debit" routerLinkActive="active-link">
+    <mat-icon>arrow_upward</mat-icon>
+    Debit
+  </button>
+
+  <button mat-button routerLink="/dashboard/transactions" routerLinkActive="active-link">
+    <mat-icon>receipt_long</mat-icon>
+    Transactions
+  </button>
+
+  <span class="spacer"></span>
+  <button mat-raised-button color="warn" (click)="logout()">Logout</button>
+</mat-toolbar>
+
+<!-- Child components will load here -->
+<div class="dashboard-content">
+  <router-outlet></router-outlet>
+</div>

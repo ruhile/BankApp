@@ -1,0 +1,67 @@
+.dashboard-home {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.welcome-card {
+  text-align: center;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.welcome-card mat-card-title {
+  font-size: 2.5rem; /* Welcome text size */
+} 
+
+.welcome-card mat-card-title span.username {
+  font-size: 3rem; /* Bigger username */
+  color: #0d47a1; /* Bank blue */
+}
+
+.welcome-card h2 {
+  color: #0d47a1; /* Bank blue */
+  font-size: 2rem;
+  margin: 10px 0 0 0;
+}
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.action-card {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border-top: 4px solid #0d47a1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.action-card mat-icon {
+  font-size: 29px;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.action-card h3 {
+  margin: 5px 0;
+  font-weight: 600;
+  color: #222;
+}
+
+.action-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
