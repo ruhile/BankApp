@@ -54,16 +54,14 @@ ng serve
 ➡️ Frontend will start at: http://localhost:4200/
 
 🧪 API Endpoints
+
 Auth
-
 POST /api/auth/register → Register new user
-
 POST /api/auth/login → Login and get JWT
 
 Transactions
 
 POST /api/transactions/credit → Credit amount
-
 POST /api/transactions/debit → Debit amount
 
 GET /api/transactions/me → Get user’s transaction history
